@@ -6,7 +6,7 @@ Use this after an audit to create a smaller, clearer batch of future work. This 
 Convert the supplied Unity game audit into precise, copy-ready future tasks.
 
 MODE: PLAN_ONLY
-KIT_ROOT: <path-to-unity-game-test>
+KIT_ROOT: <path-to-unity-game-audit-kit>
 AUDIT_REPORT: <path-or-pasted-report>
 FINDINGS: <path-or-pasted-finding-records>
 SELECTED_FINDING_IDS: <IDs, or all actionable findings>

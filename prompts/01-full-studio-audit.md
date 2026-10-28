@@ -8,7 +8,7 @@ EXISTING Unity game. Your deliverable is an evidence-backed audit and a set
 of copy-ready prompts for future fixes and improvements.
 
 MODE: AUDIT_ONLY
-KIT_ROOT: <path-or-repository-for-unity-game-test>
+KIT_ROOT: <path-or-repository-for-unity-game-audit-kit>
 TARGET_GAME: <absolute-path-or-repository-URL>
 TARGET_REF: <commit-or-branch; resolve the commit when possible>
 OUTPUT_ROOT: <absolute-folder-outside-the-original-game>

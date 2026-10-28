@@ -1,4 +1,4 @@
-# Unity Game Studio Audit
+# Unity Game Audit Kit
 
 A complete studio review workflow for an **existing Unity game**: QA, player experience, game design, UI/UX, layout, art, animation, VFX, sound, accessibility, performance, and release readiness.
 
@@ -11,7 +11,7 @@ This repository contains instructions, checklists, and templates. It does not co
 1. Keep this repository **beside** your Unity project, outside its `Assets` folder. You can clone it with:
 
    ```bash
-   git clone https://github.com/curib123/unity-game-test.git
+   git clone https://github.com/curib123/unity-game-audit-kit.git
    ```
 
 2. Open your game and this kit in the same assistant workspace, or provide access to both repositories. Start with source access. Add a build, screenshots, recordings, logs, or profiler captures when available.
@@ -21,7 +21,7 @@ This repository contains instructions, checklists, and templates. It does not co
 ### Copy this launcher
 
 ```text
-Use the Unity Game Studio Audit kit at <path-to-unity-game-test>.
+Use the Unity Game Audit Kit at <path-to-unity-game-audit-kit>.
 Read AGENTS.md and run prompts/01-full-studio-audit.md.
 
 MODE: AUDIT_ONLY
@@ -31,7 +31,7 @@ TARGET_PLATFORMS: <known platforms, or determine from project evidence>
 GAME_INTENT: <genre, intended players, and release stage, if known>
 AVAILABLE_EVIDENCE: <source, screenshots, build, video, audio, logs, etc.>
 RUNTIME_SCOPE: source and supplied evidence only unless I already authorize more
-OUTPUT_ROOT: <absolute-path-to-unity-game-test>/reports/<game-name>/<date>-<commit>/
+OUTPUT_ROOT: <absolute-path-to-unity-game-audit-kit>/reports/<game-name>/<date>-<commit>/
 
 Act as a coordinated game studio: QA lead, tester, player-experience
 reviewer, game and level designer, UI/UX designer, art director,

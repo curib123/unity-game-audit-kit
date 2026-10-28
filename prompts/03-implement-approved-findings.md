@@ -7,7 +7,7 @@ Work on the selected findings from my Unity game audit.
 
 DEFAULT_MODE: PLAN_ONLY
 # Resolve EFFECTIVE_MODE from the current user request as described below.
-KIT_ROOT: <path-to-unity-game-test>
+KIT_ROOT: <path-to-unity-game-audit-kit>
 TARGET_GAME: <path-or-repository>
 AUDIT_BASELINE: <commit-that-was-audited>
 CURRENT_BASELINE: <resolve-before-work>

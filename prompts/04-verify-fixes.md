@@ -7,7 +7,7 @@ Independently verify the selected Unity game audit findings against the
 implementation and its acceptance criteria.
 
 MODE: VERIFY_ONLY
-KIT_ROOT: <path-to-unity-game-test>
+KIT_ROOT: <path-to-unity-game-audit-kit>
 TARGET_GAME: <path-or-repository>
 AUDIT_BASELINE: <audited-commit>
 IMPLEMENTATION_REF: <commit-or-current-state-to-verify>
