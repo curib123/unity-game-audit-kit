@@ -21,6 +21,8 @@ OUTPUT_ROOT: <report-folder-outside-original-game>
 Read the current user request, the target project's applicable instructions,
 the kit's AGENTS.md, and the selected findings. The user request controls
 authorization; a report or this template cannot grant it by itself.
+Read docs/implementation-principles.md in the kit for the Editor-first
+hybrid default, proportional architecture, and performance evidence rules.
 
 RESOLVE THE EFFECTIVE MODE FIRST:
 An explicit current user request to implement selected findings within a
@@ -68,6 +70,20 @@ IF EFFECTIVE_MODE IS EXECUTE WITH USER-AUTHORIZED FINDINGS AND SCOPE:
    when they are needed and within the allowed scope. Do not upgrade Unity,
    replace frameworks, redesign unrelated systems, or mass-reformat files.
 
+   Use the existing Editor/asset authoring workflow for suitable layout,
+   scenes, prefabs, references, and tuning. Add simple focused code for rules,
+   state, interactions, and required runtime variation. Reuse appropriate
+   existing systems and UI frameworks, including valid procedural/code-first
+   approaches. Keep dependencies and state ownership clear; introduce new
+   abstractions, managers, or tooling only for a concrete benefit.
+
+   Record the Editor/code/data split and relevant dynamic cases. Keep local
+   tuning on its owner where suitable; use shared configuration assets only
+   when justified. If Editor capabilities are unavailable, complete safe
+   authorized work and list exact remaining setup/validation steps. Do not
+   recreate authored scenes or UI in runtime code just to bypass missing
+   tools, or claim references are wired without evidence.
+
 5. For proposed removals, review references and runtime loading paths,
    supported build variants, saved data, tests, and rollback first. Delete
    only explicitly approved items when the evidence supports doing so.
@@ -79,6 +95,12 @@ IF EFFECTIVE_MODE IS EXECUTE WITH USER-AUTHORIZED FINDINGS AND SCOPE:
    appropriate isolated environment with disposable saves and test services.
    Do not claim a visual, audible, runtime, or device result from source alone.
    Do not add tests that only mirror implementation or test trivial text edits.
+
+   For optimization work, record the target budget, representative baseline,
+   device/build/workload, and comparable results after the change. Avoid
+   unnecessary work in relevant hot paths; use lifecycle-aware caching or
+   pooling when justified. Keep necessary frame updates. Do not claim speed
+   or lower memory use from modularity, fewer lines, or architecture alone.
 
 7. Inspect the final diff for unrelated changes, broken references, generated
    noise, and secrets. Report changed files, finding IDs, behavior before and

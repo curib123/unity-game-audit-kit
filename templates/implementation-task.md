@@ -8,6 +8,7 @@ TASK KIND: [Investigate / Implement / Review removal]
 FINDING IDS: [AUD-###]
 USER AUTHORIZATION: [none; exact user instruction or verifiable reference]
 AUTHORIZED MODE, IDS, SCOPE, AND OPERATIONS: [none]
+IMPLEMENTATION POLICY: Editor-first hybrid; see kit docs/implementation-principles.md.
 
 Goal
 [One concrete player or production outcome.]
@@ -45,6 +46,11 @@ Operating rules
    falls within explicit authorization. Ask before extending approved scope.
 6. Removal remains a proposal until the user approves the specific candidates
    and deletion scope after reference tracing and rollback are documented.
+7. Prefer suitable existing Editor/asset authoring plus simple focused code.
+   Keep cohesive responsibilities, explicit dependencies, and clear state
+   ownership. Support required variation without speculative frameworks.
+   Preserve appropriate existing architecture; justify added abstractions.
+   Measurements are required before claiming a performance improvement.
 
 Scope and isolation
 - Permitted code/configuration paths: [none until explicitly authorized].
@@ -65,6 +71,17 @@ Dependencies and proposed approach
 - Expected changed files/assets: [bounded list; justify each].
 - Risks and mitigation: [specific risks introduced by this scope].
 
+Editor, code, and data plan
+Keep this section proportionate; mark unaffected fields Not applicable.
+- Existing authoring/UI approach and reusable systems: [actual project evidence].
+- Editor/asset work: [scenes, prefabs, UI documents, references, Inspector tuning].
+- Focused code work: [rules, interactions, state, runtime generation if justified].
+- Configuration and state: [local/shared data choice; owner, lifetime, reset].
+- Required dynamic cases: [content variation, states, resolutions, inputs].
+- Simplicity rationale: [smallest complete solution; any justified abstraction].
+- Performance goal: [budget or Unknown; baseline and comparison method if relevant].
+- Remaining Editor steps: [exact setup and checks if tools are unavailable].
+
 Observable acceptance criteria
 - [Given a defined state, when an action occurs, the visible result is ...].
 - [Required regression behavior remains ...].
@@ -76,6 +93,8 @@ Verification plan — not yet executed
 - Regression cases: [adjacent flows, persistence, scene transitions, errors].
 - Platform matrix: [platform / OS / build type / hardware / resolution / input].
 - Unity asset checks: [references, GUIDs, scene/prefab overrides, build inclusion].
+- Hybrid checks: [authored setup plus code, configuration changes, required states/variations].
+- Performance claims, if any: [comparable device/build/workload captures; unknown until measured].
 - Independent verification: [separate reviewer or independent evidence method
   that evaluates the original acceptance criteria, not just implementation].
 - Unavailable tests: [reason, impact, next prerequisite; do not claim a pass].

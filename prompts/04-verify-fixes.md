@@ -20,6 +20,8 @@ Read AGENTS.md, docs/evidence-and-priorities.md, the selected finding records,
 the implementation task acceptance criteria, and applicable target-project
 instructions. Preserve the original game and existing user edits. Do not
 apply additional fixes or rewrite the acceptance criteria to fit the result.
+Use docs/implementation-principles.md to assess relevant hybrid setup and
+performance claims; it does not authorize additional changes or checks.
 
 1. Record the actual implementation commit, working-tree state, Unity and
    package versions, platform/build/device/input conditions, and evidence.
@@ -48,6 +50,13 @@ apply additional fixes or rewrite the acceptance criteria to fit the result.
    Check relevant states, supported displays, controls, and accessibility.
    A concept image alone cannot verify implementation or improved usability;
    identify missing rendered, interaction, or player evidence explicitly.
+
+   For hybrid implementations, check authored asset/reference setup and code
+   together, including relevant overrides, tuning, state reset, and required
+   variations. Identify unfinished Editor steps. For performance claims,
+   compare representative baseline and changed captures under comparable
+   conditions; otherwise mark the claimed improvement unverified. Do not
+   expand verification merely to enforce an architectural preference.
 
 5. Assign each finding one status with supporting evidence:
    - Verified: all required acceptance criteria are supported by evidence.

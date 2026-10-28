@@ -15,9 +15,10 @@ TARGET_REF: <baseline-commit>
 OUTPUT_ROOT: <folder-outside-original-game>
 MILESTONE_AND_CONSTRAINTS: <if known>
 
-Read AGENTS.md, docs/evidence-and-priorities.md, and
-templates/implementation-task.md. Inspect the supplied evidence and current
-baseline read-only when available. Do not modify the game, run builds,
+Read AGENTS.md, docs/evidence-and-priorities.md,
+docs/implementation-principles.md, and templates/implementation-task.md.
+Inspect the supplied evidence and current baseline read-only when available.
+Do not modify the game, run builds,
 upgrade packages, delete assets, or begin implementing the tasks.
 
 1. Confirm that the requested finding IDs exist. Keep their stable IDs.
@@ -47,6 +48,12 @@ upgrade packages, delete assets, or begin implementing the tasks.
    and accessibility settings. Do not imply those files may be changed now.
    Keep Unity version, APIs, asset conventions, and .meta/GUID references
    compatible with the actual project. Unknown decisions stay explicit.
+
+   Apply the Editor-first hybrid policy. For relevant tasks, name the Editor
+   work, focused code, configuration/state ownership, required variations,
+   and validation. Keep suitable existing UI and architecture patterns.
+   Justify added abstractions through a concrete need. Record performance
+   targets and evidence where relevant; do not promise speed from design alone.
 
    When art-ui-redesign.md is supplied, carry the recommended or selected
    direction, preserved strengths, screen/system scope, responsive behavior,

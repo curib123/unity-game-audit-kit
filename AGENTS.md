@@ -17,6 +17,13 @@ Read the user's current request and the target repository's applicable instructi
 - Focused art/UI improvement or redesign: `prompts/05-art-ui-redesign-review.md`, with `templates/art-ui-redesign.md`.
 - Evidence and prioritization: `docs/evidence-and-priorities.md`.
 - Specialist responsibilities: `docs/studio-roles.md`.
+- Editor-first hybrid implementation policy: `docs/implementation-principles.md`.
+
+## Implementation preference
+
+Apply `docs/implementation-principles.md` to recommendations, task generation, and later authorized implementation. Prefer the existing Unity Editor/asset authoring workflow for suitable content and configuration, with simple focused code for behavior and real runtime variation. Keep responsibilities modular, state ownership clear, required variations configurable, and performance claims grounded in measurements. Add abstractions, frameworks, managers, or editor tooling only when a concrete need justifies them.
+
+Respect appropriate existing code-first or procedural systems and the actual UI framework. This preference is not a reason for unrelated rewrites or a defect classification by itself. It grants no permission to open, import, save, or modify the original game during `AUDIT_ONLY` or `PLAN_ONLY`. If required Editor capabilities are unavailable during authorized implementation, complete safe in-scope work and describe the exact remaining setup and validation; do not claim it happened or recreate the project through runtime code as a workaround.
 
 ## Audit boundaries
 
@@ -55,6 +62,8 @@ Use the studio roles as review perspectives. Delegate independent areas when too
 Save requested reports only in the agreed output folder outside the game. The default shape is `reports/<game-slug>/<YYYY-MM-DD>-<short-sha>/` within this kit. Use `unknown-ref` if no commit exists; record why. Never overwrite previous runs silently.
 
 Prepare one future implementation or investigation prompt per finding or shared root cause. Unknown causes require investigation before a fix. Every prompt must preserve scope, dependencies, tests, and rollback. Generating or reading a prompt is not permission to execute it.
+
+For relevant tasks, identify Editor work, code work, configuration/state ownership, required dynamic cases, and performance targets/evidence. Keep this proportionate: mark unaffected fields not applicable and explain any additional abstraction or tooling through a concrete benefit.
 
 Only a separate explicit user request authorizing selected finding IDs or an equivalent concrete scope permits implementation. Honor authorization already present in the current conversation without asking again. Keep unapproved findings in the backlog. Never automatically publish reports, open issues, send messages, merge changes, or deploy builds.
 

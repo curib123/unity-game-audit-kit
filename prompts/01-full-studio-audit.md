@@ -23,8 +23,8 @@ DEPTH: standard full-studio review; disclose sampling and unavailable checks
 1. ESTABLISH SCOPE AND PRESERVE THE ORIGINAL GAME
 
 Read the kit's AGENTS.md, docs/workflow.md, docs/evidence-and-priorities.md,
-and applicable instructions in the target repository. Distinguish the kit
-from the game. If no game is accessible, report the missing input and
+docs/implementation-principles.md, and applicable target instructions.
+Distinguish the kit from the game. If no game is accessible, report the missing input and
 prepare the project brief; do not invent an audit verdict.
 
 Resolve the actual baseline: repository, commit, branch, dirty state,
@@ -176,6 +176,12 @@ Generate one future prompt per actionable finding or shared root cause.
 Include baseline, evidence, objective, permitted paths/systems, boundaries,
 dependencies, implementation outline, acceptance criteria, test plan, and
 rollback. Investigation comes first when the cause or defect is unverified.
+Apply the Editor-first hybrid policy: propose suitable authored/configuration
+changes and simple code, with clear state ownership and required dynamic
+cases. Prefer the smallest complete solution, reuse appropriate systems,
+and justify extra abstractions. Performance claims need measurements.
+This preference neither authorizes Editor writes nor makes a different
+existing architecture a defect by itself.
 For design changes include the intended player benefit and validation method.
 For removals include the dependency review and restore plan.
 

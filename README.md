@@ -6,6 +6,21 @@ A complete studio review workflow for an **existing Unity game**: QA, player exp
 
 This repository contains instructions, checklists, and templates. It does not contain a playable game or an automatic scanner, and installing it does not run a test. A reviewer or AI assistant needs access to your actual game and any relevant evidence.
 
+## Implementation approach: Editor-first hybrid
+
+Future changes use the game's existing Unity authoring workflow for suitable scenes, prefabs, layout, references, assets, and Inspector tuning, with simple focused code for rules, state, interactions, and genuinely dynamic behavior. The aim is a game that is easy to adjust, extend, and verify.
+
+| Principle | How the kit applies it |
+| --- | --- |
+| Editor-first hybrid | Choose an appropriate split between authored content, configuration, and code; keep useful existing procedural or code-first systems. |
+| Simple | Make the smallest complete change. Add abstractions, managers, tools, or dependencies only for a concrete need. |
+| Modular | Use cohesive components, clear state ownership, explicit references, and reuse where it helps. |
+| Dynamic and flexible | Support required content variations, runtime states, screens, and input modes through suitable data and focused behavior. |
+| Fast to iterate | Keep useful settings and references easy to inspect and tune; document remaining Editor setup. |
+| Efficient at runtime | Avoid unnecessary work and optimize measured bottlenecks against the game's device and build targets. |
+
+The [implementation principles](docs/implementation-principles.md) define the default for generated tasks and later authorized changes. They do not require a framework migration or treat an existing architecture as defective merely because it differs. Audits remain read-only. Performance improvements require measurements; a simpler design alone does not prove that the game runs faster.
+
 ## Start here
 
 1. Keep this repository **beside** your Unity project, outside its `Assets` folder. You can clone it with:

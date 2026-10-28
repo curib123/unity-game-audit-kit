@@ -63,6 +63,8 @@ These are discovery hints. Verify paths, serialization, active settings, and doc
 - [ ] Review state machines and event subscriptions for duplicate transitions, stale listeners, unintended re-entry, and actions after scene teardown.
 - [ ] Inspect plugins and packages for compatible declared versions and known issues relevant to actual use. Verify current advisories against primary sources before alleging a vulnerability.
 - [ ] Do not classify file length, preferred patterns, naming, or an unfamiliar framework as a defect without a concrete impact.
+- [ ] Apply the [Editor-first hybrid principles](../docs/implementation-principles.md) to proposed remedies: consider suitable authored content/configuration plus simple code, actual reuse, explicit dependencies, state ownership, and required variation. A different existing architecture is not a defect by itself.
+- [ ] Identify evidence of unnecessary abstraction, duplicated systems, hidden setup, or awkward tuning through concrete player/developer impact. Recommend the smallest coherent improvement; do not impose new frameworks or blanket rewrites.
 
 ## TQA-03 — Unity lifecycle and repeated sessions
 

@@ -78,6 +78,7 @@ Select per screen/system; these strategies do not replace finding type, confiden
 ### Proposed design specification
 
 Fill applicable rows with concrete changes; use `Keep` or `Not applicable` with a reason elsewhere.
+Apply the kit's `docs/implementation-principles.md`: suitable Editor/asset authoring plus simple code, with proportionate modularity, required variation, and measured performance claims.
 
 | Area | Existing evidence | Proposed behavior or visual treatment | Constraint / dependency |
 | --- | --- | --- | --- |
@@ -88,6 +89,7 @@ Fill applicable rows with concrete changes; use `Keep` or `Not applicable` with 
 | Icons and imagery | [E-###] | [silhouette/meaning, label pairing, scale, consistent asset treatment] | [recognition and reuse] |
 | Interaction states | [E-###] | [idle, focus/hover, selected, disabled, pending, success, error, recovery] | [applicable state/input matrix] |
 | Art direction | [E-###] | [shape, proportion, materials, detail, lighting, composition, animation/VFX role] | [existing identity; gameplay readability] |
+| Authoring and behavior | [existing UI framework, setup, and code] | [Editor work, focused code, configurable data, required dynamic states] | [ownership, supported tools, remaining setup, measured budgets] |
 
 ### Alternatives and selection
 

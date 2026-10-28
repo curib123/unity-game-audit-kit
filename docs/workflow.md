@@ -42,6 +42,8 @@ For possible removals, complete the [removal review](../templates/removal-review
 
 The full audit produces copy-ready prompts using the [implementation task template](../templates/implementation-task.md). Use [prompt 2](../prompts/02-generate-fix-prompts.md) to refine a selected batch later.
 
+Apply the [Editor-first hybrid implementation principles](implementation-principles.md). For relevant work, specify the existing authoring/UI approach, planned Editor changes, focused code changes, configuration and state ownership, supported dynamic cases, and performance evidence needed. Use the smallest complete solution; preserve suitable existing systems and justify new abstractions through actual needs. This is planning during an audit, with no original-game mutation.
+
 Group symptoms with a shared cause. Put dependencies before dependent fixes. Include precise acceptance criteria, affected systems, needed evidence, test scope, rollback, and an effort estimate with assumptions. Unknown causes produce investigation tasks. Design decisions that the user must make remain explicit; they are not silently chosen by the implementation prompt.
 
 When a redesign brief exists, carry its screen/system scope, direction, preserved elements, responsive/input behavior, and validation criteria into the future tasks. Distinguish a recommendation from a selected direction. Honor a current user instruction adopting the recommendation; otherwise keep tasks conditional on the design decision and do not combine alternative directions into one implementation.
@@ -59,5 +61,7 @@ Reports may contain proprietary or personal information. Keep evidence local or 
 ## 8. Verify separately after authorized fixes
 
 Use [prompt 4](../prompts/04-verify-fixes.md) against the actual implementation commit. Compare each approved task's acceptance criteria with fresh evidence. State `Verified`, `Failed`, `Blocked`, or `Not verified` for each finding and explain why. Preserve original IDs and record new issues separately.
+
+For hybrid changes, verify the authored setup and code together: references and overrides, configuration behavior, state reset, supported variations, and relevant runtime scenarios. Record unfinished Editor setup explicitly. Compare performance against a representative baseline when claiming an improvement; do not infer speed from modularity, fewer lines, or an Editor-first approach alone.
 
 Verification can conclude that a fix is incomplete. It does not authorize additional game changes. Stop when the requested validation is sufficient; broaden testing only for a concrete remaining risk or required release gate.

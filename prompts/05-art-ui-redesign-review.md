@@ -30,6 +30,7 @@ RUNTIME_SCOPE: supplied evidence and source only unless my current request
 
 Read AGENTS.md, docs/evidence-and-priorities.md,
 checklists/design-ux-art-audio.md, and templates/art-ui-redesign.md.
+Read docs/implementation-principles.md for the Editor-first hybrid default.
 Follow the applicable target-project instructions. Distinguish the kit,
 original game, and report output. Keep the original code, scenes, prefabs,
 assets, .meta files, import settings, packages, settings, and player data
@@ -76,6 +77,12 @@ Assess these relationships using actual evidence:
 - Accessibility: color-independent cues, text, focus, motion, and input needs.
 - Feasibility: actual UI framework, asset reuse, production effort, supported
   devices, and measured budgets; do not prescribe a framework migration.
+
+Plan suitable layout, styling, references, and tuning through the existing
+authoring workflow, with focused code for behavior and dynamic content.
+Keep valid code-first approaches where appropriate. Do not introduce a UI
+framework, generic manager, or runtime scene builder just to deliver a
+redesign. Give an explicit Editor/code/data split and needed capabilities.
 
 Record specific problems and player impact rather than labels such as ugly,
 outdated, or unprofessional without an explanation. Separate defects from

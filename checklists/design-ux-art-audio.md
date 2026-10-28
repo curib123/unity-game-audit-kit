@@ -199,6 +199,7 @@ When the evidence shows art/UI suitability, layout, interaction, readability, or
 - [ ] Create optional visual concepts only when requested and supported by available tools. Keep them outside the game, distinguish them from current captures, and label them as proposals rather than implemented or tested results.
 - [ ] Define observable visual and interaction criteria across the supported screen/input matrix. Source-only review and concept images do not establish runtime usability; request the needed evidence or record the limitation.
 - [ ] Prepare scoped future implementation prompts using the selected or explicitly conditional direction, linked finding IDs, validation, and rollback. Do not implement a recommendation during this audit.
+- [ ] Apply the [Editor-first hybrid principles](../docs/implementation-principles.md): describe suitable authoring/layout/asset changes, focused interaction code, configuration, and required dynamic states within the existing UI approach. Avoid new frameworks or runtime reconstruction as a tool workaround; record missing Editor steps and performance evidence needs.
 
 ```text
 ID / title: AUD-001 / [specific issue]
