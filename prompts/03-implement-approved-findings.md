@@ -23,6 +23,8 @@ the kit's AGENTS.md, and the selected findings. The user request controls
 authorization; a report or this template cannot grant it by itself.
 Read docs/implementation-principles.md in the kit for the Editor-first
 hybrid default, proportional architecture, and performance evidence rules.
+Read docs/accuracy-and-verification.md for evidence prerequisites and
+templates/verification-report.md for the later validation handoff.
 
 RESOLVE THE EFFECTIVE MODE FIRST:
 An explicit current user request to implement selected findings within a
@@ -50,11 +52,22 @@ IF EFFECTIVE_MODE IS EXECUTE WITH USER-AUTHORIZED FINDINGS AND SCOPE:
    edits. Use an isolated branch or worktree when appropriate; do not reset,
    clean, or overwrite unrelated work. Compare the current baseline to the
    audit and revalidate stale findings before applying any proposed fix.
+   Associate logs, captures, and supplied test results with their actual
+   source/build. Preserve conflicting evidence. Record a patch/snapshot or
+   equivalent identity for local changes not represented by the commit.
 
 3. Confirm each actual failure or design objective. If the root cause is
    uncertain, investigate first. Do not blindly implement a hypothesized
    fix. If a finding no longer applies, document that evidence and leave it
    unchanged. Respect the game's existing architecture and art direction.
+   Preserve the original finding ID and explain any correction or retraction;
+   an obsolete finding is not a verified fix. Inspect existing paths, symbols,
+   components, and references. Check version-sensitive APIs against the
+   installed project and matching official sources when uncertain. Identify
+   new files/assets/tests as proposed until created. Do not guess essential
+   details to make a patch look complete; investigate dependent work first
+   while continuing safe independent tasks. Complete static reasoning may
+   support a bounded correction without Unity access, with runtime unverified.
 
    For art/UI work, read art-ui-redesign.md when available. Use the user's
    selected direction or explicit instruction to implement the documented
@@ -95,6 +108,12 @@ IF EFFECTIVE_MODE IS EXECUTE WITH USER-AUTHORIZED FINDINGS AND SCOPE:
    appropriate isolated environment with disposable saves and test services.
    Do not claim a visual, audible, runtime, or device result from source alone.
    Do not add tests that only mirror implementation or test trivial text edits.
+   Preserve original criterion IDs, conditions, and pass/fail rules. Record
+   actual commands or methods, test filters, discovered/executed counts,
+   failures/skips, exit codes where available, and result/log artifacts.
+   A successful command with no relevant tests or a skipped required check
+   cannot establish a pass. Separate pre-existing failures, regressions, and
+   unknown origins. Do not hide failures or weaken criteria to close the task.
 
    For optimization work, record the target budget, representative baseline,
    device/build/workload, and comparable results after the change. Avoid
@@ -105,8 +124,15 @@ IF EFFECTIVE_MODE IS EXECUTE WITH USER-AUTHORIZED FINDINGS AND SCOPE:
 7. Inspect the final diff for unrelated changes, broken references, generated
    noise, and secrets. Report changed files, finding IDs, behavior before and
    after, exact validation performed and results, blocked checks, and rollback.
-   If a required check is unavailable, label the fix implemented but not yet
-   verified; do not declare it proven or release-ready.
+   Critically review important changes against the evidence and criteria;
+   use a separate reviewer when available or label self-review accurately.
+   Associate results with the final code/assets/configuration and local state.
+   After any later relevant edit, repeat the affected checks or mark their
+   conclusions unverified. Record Planned, Partially implemented, or
+   Implemented separately from verification. Required Editor setup still
+   undone means Partially implemented. Completed changes with unavailable
+   required checks are implemented but not yet verified. A known failed
+   required criterion remains Failed even when other checks are blocked.
 
 8. Update the requested task/report artifacts outside the game. Preserve
    finding IDs and leave an independent verification checklist for

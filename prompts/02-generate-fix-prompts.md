@@ -16,7 +16,8 @@ OUTPUT_ROOT: <folder-outside-original-game>
 MILESTONE_AND_CONSTRAINTS: <if known>
 
 Read AGENTS.md, docs/evidence-and-priorities.md,
-docs/implementation-principles.md, and templates/implementation-task.md.
+docs/accuracy-and-verification.md, docs/implementation-principles.md, and
+templates/implementation-task.md.
 Inspect the supplied evidence and current baseline read-only when available.
 Do not modify the game, run builds,
 upgrade packages, delete assets, or begin implementing the tasks.
@@ -24,6 +25,8 @@ upgrade packages, delete assets, or begin implementing the tasks.
 1. Confirm that the requested finding IDs exist. Keep their stable IDs.
    Mark stale or conflicting evidence and the revalidation needed. Never
    invent a code path, asset name, stack trace, test result, or root cause.
+   Retain corrections and refutations with their evidence; do not silently
+   convert an obsolete or disproven finding into a fix task.
 
 2. Group findings with a shared cause, preserve dependencies, and order the
    tasks by player impact, milestone relevance, and uncertainty. Explain
@@ -34,6 +37,10 @@ upgrade packages, delete assets, or begin implementing the tasks.
    objective, allowed systems/paths, scope exclusions relevant to the task,
    dependencies, likely effort with assumptions, acceptance criteria,
    validation steps, regression concerns, and rollback.
+   Carry original criterion IDs, requirement sources, required conditions,
+   and evidence methods forward. Separate inspected existing targets from
+   proposed new files/assets/tests. Verify relevant API availability against
+   the actual Unity/packages and matching primary sources when needed.
 
 4. For a confirmed defect, describe the smallest appropriate fix based on
    evidence. Do not treat a proposed cause as proven. For a likely/possible
@@ -42,6 +49,10 @@ upgrade packages, delete assets, or begin implementing the tasks.
    review that can establish whether the proposal helps. For a missing
    requirement, cite the requirement. For a removal candidate, require a
    dependency/loading review and explicit removal scope before deletion.
+   If an essential cause, reference, or API remains unknown, specify the
+   smallest investigation and the evidence needed before a dependent patch.
+   Runtime access is not mandatory for a fully grounded source correction,
+   but required runtime validation must remain explicit and unperformed.
 
 5. Include non-code work where appropriate: scenes, prefabs, UI layout,
    textures, materials, animation, VFX, audio clips/mixers, localization,

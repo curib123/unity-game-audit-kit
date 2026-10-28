@@ -23,7 +23,8 @@ DEPTH: standard full-studio review; disclose sampling and unavailable checks
 1. ESTABLISH SCOPE AND PRESERVE THE ORIGINAL GAME
 
 Read the kit's AGENTS.md, docs/workflow.md, docs/evidence-and-priorities.md,
-docs/implementation-principles.md, and applicable target instructions.
+docs/accuracy-and-verification.md, docs/implementation-principles.md, and
+applicable target instructions.
 Distinguish the kit from the game. If no game is accessible, report the missing input and
 prepare the project brief; do not invent an audit verdict.
 
@@ -65,6 +66,13 @@ cannot establish game feel, aesthetic quality, audible mix quality, or
 measured performance. An AI player persona is a review hypothesis, not
 feedback from an actual player. Supplied recordings are observations of
 those recordings, not sessions you personally executed.
+
+Give evidence traceable IDs, source/build associations, capture conditions,
+and method. Distinguish inspected source, supplied artifacts, executed checks,
+and proposed protocols. Unknown provenance stays unknown. Inspect actual
+paths/symbols/objects; never fabricate locators, APIs, versions, or results.
+Use installed project evidence and matching official documentation for
+version-sensitive behavior; do not assume an API exists in this project.
 
 Separate first-party code and assets from packages, vendor content, samples,
 generated files, and fixtures. Inspect version-specific configuration for
@@ -139,7 +147,8 @@ Use stable AUD-001 IDs and templates/finding.md. For every finding include:
 - Root cause as known or hypothesized; keep it separate from the symptom.
 - Recommended action, alternatives or tradeoffs, and dependencies.
 - Relative effort XS / S / M / L / Unknown, with assumptions.
-- Observable acceptance criteria and the exact validation still needed.
+- Observable acceptance criteria with IDs such as AUD-001/AC-01, required
+  conditions, suitable evidence methods, and the exact validation still needed.
 
 Missing access is a coverage gap, not a game defect. Never fabricate evidence
 or numeric measurements to complete a template. A clear static invariant
@@ -150,6 +159,12 @@ underlying obstacle was observed.
 Deduplicate findings with a shared root cause. Cross-reference related
 disciplines under the same finding. Include supported strengths and the
 behavior or style that future work should preserve.
+
+Challenge important findings against their source and alternative explanations.
+Use a separate reviewer when available, or label critical self-review as such.
+Do not treat reviewer agreement as proof. Resolve contradictions where possible;
+otherwise retain the uncertainty and generate an investigation task. Preserve
+IDs and correction history when evidence refutes or supersedes a finding.
 
 5. PRODUCE THE REPORT AND FUTURE TASK PROMPTS
 
@@ -184,6 +199,9 @@ This preference neither authorizes Editor writes nor makes a different
 existing architecture a defect by itself.
 For design changes include the intended player benefit and validation method.
 For removals include the dependency review and restore plan.
+Identify inspected existing implementation targets separately from proposed
+new files/assets/tests. Carry evidence prerequisites and original criterion
+IDs forward; do not fill gaps with plausible-looking implementation details.
 
 All generated tasks default to PLAN_ONLY and are proposals. They do not
 authorize changes. Use prompts/03-implement-approved-findings.md only in a

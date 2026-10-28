@@ -16,6 +16,7 @@ Read the user's current request and the target repository's applicable instructi
 - Independent verification: `prompts/04-verify-fixes.md`.
 - Focused art/UI improvement or redesign: `prompts/05-art-ui-redesign-review.md`, with `templates/art-ui-redesign.md`.
 - Evidence and prioritization: `docs/evidence-and-priorities.md`.
+- Accuracy and verification: `docs/accuracy-and-verification.md`, with `templates/verification-report.md`.
 - Specialist responsibilities: `docs/studio-roles.md`.
 - Editor-first hybrid implementation policy: `docs/implementation-principles.md`.
 
@@ -48,6 +49,12 @@ Use the shared vocabulary:
 - Coverage: `Checked`, `Partially checked`, `Not checked`, `Blocked`, `Not applicable`.
 
 Keep observations separate from inferred causes. Only mark checks as performed when there is actual evidence. Never invent player sessions, screenshots, hearing impressions, profiler measurements, tests, Console results, or successful builds. AI persona analysis is a hypothesis, not human playtest feedback.
+
+Apply `docs/accuracy-and-verification.md` throughout the workflow. Tie evidence to its actual source, commit or build plus local changes, conditions, and method; distinguish supplied artifacts from checks personally executed. Inspect existing paths, symbols, references, and version-sensitive APIs before depending on them. Label proposed additions as new, and unknown values as unknown. A confirmed symptom does not prove its cause or the proposed correction.
+
+Revalidate stale or conflicting evidence against the current game before dependent implementation. Keep corrected or retracted findings traceable under their original IDs. Resolve uncertainty essential to a patch through investigation; continue safe independent work. A supported source correction may proceed within authorization without runtime tools, with the unperformed checks explicit.
+
+Keep implementation completeness separate from verification. Required Editor setup left undone means partial implementation. `Verified` requires evidence for every required acceptance criterion and relevant regression check on the final changed state. Record actual test discovery, counts, skips, results, and artifacts as applicable; no relevant tests or skipped required checks cannot establish a pass. A known failed required criterion takes precedence over blocked checks. Later relevant edits require renewed affected checks. Never weaken criteria, suppress failures, or claim whole-game correctness to close a task.
 
 Missing access is not a game defect. A potential improvement is not automatically a missing requirement. Review the game's intended genre, art direction, audience, stage, platforms, and constraints before proposing additions or removals. Sample first-party content and disclose sampling. Treat vendor code separately from project integration.
 

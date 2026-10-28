@@ -2,6 +2,8 @@
 
 Template only. Replace placeholders with observed evidence; remove unused example rows. An unperformed audit has no findings or score.
 
+Apply the kit's `docs/accuracy-and-verification.md`. Conclusions apply to the inspected evidence and scope; this report cannot establish 100% correctness. Resolve copied links from the final output folder, and retain unknowns instead of fabricating values.
+
 ## Executive summary
 
 - Audit outcome for the stated scope: [two or three sentences with finding/evidence references].
@@ -34,6 +36,7 @@ Dirty work and a built artifact can differ from the named commit. Explain the ex
 - In scope / exclusions: [flows, disciplines, platforms, scenes].
 - Limitations affecting conclusions: [access, unavailable build, short session, simulator, missing references].
 - Human observations vs AI analysis: [identify who observed what; synthetic personas are analytical perspectives].
+- Critical review: [actual independent review or self-review; evidence challenged, contradictions resolved or outstanding, corrected/retracted finding IDs].
 
 | Action | Status: performed / planned / blocked | Actual environment and evidence | Limitation / next step |
 | --- | --- | --- | --- |
@@ -104,6 +107,7 @@ Full review: [removal-candidates.md or inline record].
 - Default mode: `PLAN_ONLY`. Uncertain findings become investigation tasks; fixes require explicit user authorization for finding IDs and scope.
 - Decisions needed: [concrete options, supporting evidence, affected findings].
 - Planned verification: [acceptance criteria, platform matrix, independent reviewer; clearly not yet performed].
+- Implementation readiness: [grounded tasks vs investigations; existing targets/APIs checked, proposed additions labeled, essential unknowns and next evidence].
 - Open coverage work: [highest-value unperformed checks and prerequisites].
 
 ## Evidence index
@@ -111,3 +115,5 @@ Full review: [removal-candidates.md or inline record].
 | Evidence ID / relative path | Captured at (UTC) | Source / observer | What it supports | Limits |
 | --- | --- | --- | --- | --- |
 | [E-001 / evidence/file] | [timestamp] | [build/commit, tool or person] | [AUD-### / coverage item] | [context missing / none known] |
+
+Label evidence as directly inspected, supplied, or actually executed; distinguish it from planned protocols. Preserve the commit/build plus dirty-state association and flag stale or contradictory evidence. Audit confidence in a symptom does not establish the proposed cause or prove a later fix. Keep original criterion IDs for the later `verification-report.md`.

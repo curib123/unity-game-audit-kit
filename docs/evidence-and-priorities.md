@@ -2,11 +2,15 @@
 
 Use these rules across every studio discipline. The goal is a backlog a developer or designer can act on without guessing which statements are observations and which are proposals.
 
+Use the [accuracy and verification policy](accuracy-and-verification.md) for evidence checks, task readiness, and final implementation verification. No confidence label or completed checklist guarantees total accuracy.
+
 ## Evidence contract
 
 For each finding, record the target commit or build, date, relevant environment, evidence locator, observed behavior, intended behavior and its basis, impact, and limits. Evidence can be a source symbol and line, asset GUID and object path, screenshot region, recording timestamp, Console stack trace, test result, build log, or profiler capture and marker.
 
 Prefer a pinned commit link or a path plus commit, rather than a moving branch link alone. For local edits, describe the dirty state and preserve a suitable baseline snapshot outside the target. Redact secrets and personal data without erasing the context necessary to understand the issue.
+
+Identify whether evidence was directly inspected, supplied by someone else, or produced by an actually executed check. Record the source build/ref association or mark it unknown. A proposed test protocol is not evidence of a result. Use real inspected locations; omit unknown line numbers or GUIDs rather than inventing them. Proposed new files, assets, or tests must be labeled as additions.
 
 Keep three statements separate:
 
@@ -37,6 +41,8 @@ If evidence is unavailable, record a coverage gap. Do not manufacture a finding 
 | Possible | The hypothesis is plausible but evidence is incomplete. |
 
 Confidence is about the claim's support. It is separate from severity and from whether the proposed fix is correct. For a design opportunity, confidence can apply to an observed obstacle; it does not prove the proposed design will solve it. Use an experiment when that remains uncertain.
+
+State what each confidence judgment applies to: the observation, the cause, or the expected benefit. Retain contradictory evidence and the check that would resolve it. If later evidence refutes or supersedes a finding, preserve its ID and record the correction and rationale; do not silently remove it or describe it as a verified fix.
 
 ## Severity: consequence if the finding applies
 
@@ -80,6 +86,8 @@ Record an executed test's result separately, such as `Pass`, `Fail`, `Inconclusi
 Describe an observable outcome in the relevant conditions. For example, require that a specific screen's controls remain visible and reachable at the supported resolutions and input modes, with screenshots and interaction evidence. Do not declare an arbitrary frame-rate, loudness, contrast, or memory target to be the game's requirement; agree on a target or cite the existing one.
 
 Each future task includes baseline, finding IDs, objective, permitted scope, dependencies, acceptance criteria, validation, and rollback. Risk findings begin with confirmation steps. Design opportunities include the intended player benefit and a way to compare the result. Removal tasks require dependency and loading-path review before any later authorized deletion.
+
+Assign criterion IDs within each finding, such as `AUD-001/AC-01`, and carry the original criterion, required conditions, and appropriate evidence method into the task and [verification report](../templates/verification-report.md). Do not quietly narrow a criterion or mark a required check not applicable to obtain a pass. Report any user-authorized requirement change separately. A successful tool exit, skipped tests, or zero relevant tests cannot replace the required evidence.
 
 ## Keep reports proportionate
 

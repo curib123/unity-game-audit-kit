@@ -9,6 +9,7 @@ FINDING IDS: [AUD-###]
 USER AUTHORIZATION: [none; exact user instruction or verifiable reference]
 AUTHORIZED MODE, IDS, SCOPE, AND OPERATIONS: [none]
 IMPLEMENTATION POLICY: Editor-first hybrid; see kit docs/implementation-principles.md.
+EVIDENCE POLICY: Follow kit docs/accuracy-and-verification.md.
 
 Goal
 [One concrete player or production outcome.]
@@ -22,6 +23,12 @@ Baseline and evidence
 - Root cause: [Known / Hypothesis / Unknown; evidence and alternatives].
 - Confidence and limits: [Confirmed / Likely / Possible; reasoning].
 - Expected behavior source: [requirement / explicit design proposal].
+- Evidence provenance/currentness: [direct/supplied/executed; source ref or
+  build association, capture conditions, current/stale/conflicting/unknown].
+- Inspected existing targets: [actual paths/symbols/objects/references; locators].
+- Proposed additions: [new files/assets/symbols/tests; not yet existing].
+- Relevant API contracts: [actual project/package version and source or matching
+  official reference; unresolved compatibility becomes an investigation step].
 
 Operating rules
 0. Resolve the effective mode from the current user request. Explicitly
@@ -41,6 +48,10 @@ Operating rules
 4. Unknown or hypothetical root causes require investigation before a fix.
    Identify the smallest check that separates plausible explanations. Runtime
    experiments require an authorized isolated copy and approved services/saves.
+   Resolve essential unknown references/APIs before dependent edits; continue
+   safe independent work. Grounded source corrections can proceed without
+   runtime tools, with runtime claims unverified. Retain original finding IDs
+   and correction evidence if the claim is refuted or no longer applies.
 5. Use the smallest justified change. Explain any package/dependency change,
    data migration, style redesign, or generated asset; perform it only if it
    falls within explicit authorization. Ask before extending approved scope.
@@ -83,9 +94,13 @@ Keep this section proportionate; mark unaffected fields Not applicable.
 - Remaining Editor steps: [exact setup and checks if tools are unavailable].
 
 Observable acceptance criteria
-- [Given a defined state, when an action occurs, the visible result is ...].
-- [Required regression behavior remains ...].
+- [AUD-###/AC-01: original criterion, given state/action and observable result,
+  required conditions and appropriate evidence method; requirement source].
+- [AUD-###/AC-02: required regression behavior and evidence method].
 - [Measured threshold, measurement method, and requirement source if applicable].
+Preserve criterion IDs and wording from the finding. Record missing criteria
+as a task prerequisite; never silently narrow them or change them to fit a fix.
+Record any user-authorized requirement revision separately with its source.
 
 Verification plan — not yet executed
 - Reproduce baseline issue: [steps; evidence to capture].
@@ -97,7 +112,12 @@ Verification plan — not yet executed
 - Performance claims, if any: [comparable device/build/workload captures; unknown until measured].
 - Independent verification: [separate reviewer or independent evidence method
   that evaluates the original acceptance criteria, not just implementation].
+- Actual execution records after work: [methods/commands, filters, relevant
+  test counts/skips/failures, exit details, raw artifacts and evaluated state;
+  unknown when unavailable; a planned run or zero tests cannot establish Pass].
 - Unavailable tests: [reason, impact, next prerequisite; do not claim a pass].
+- Final-state check: [final code/assets/configuration and dirty snapshot;
+  later relevant edits require affected checks again, or stale/unverified status].
 
 Rollback
 - Preserved baseline / recovery artifact: [commit, patch, asset+meta snapshot].
@@ -110,4 +130,10 @@ For PLAN_ONLY, provide evidence, a bounded plan, estimated uncertainty, and
 the specific authorization needed. For authorized EXECUTE, report changed
 files/assets, why, performed verification with results and evidence, remaining
 limits, and rollback. Clearly separate completed actions from proposed steps.
+Record Planned / Partially implemented / Implemented separately from
+Verified / Failed / Blocked / Not verified. Unfinished required Editor setup
+means partial implementation. A known required failure remains Failed even
+when another check is blocked. Only completed changes with missing required
+validation may be called implemented but not yet verified. Use the kit's
+templates/verification-report.md for evidence tied to original criteria.
 ```

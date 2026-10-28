@@ -31,6 +31,7 @@ RUNTIME_SCOPE: supplied evidence and source only unless my current request
 Read AGENTS.md, docs/evidence-and-priorities.md,
 checklists/design-ux-art-audio.md, and templates/art-ui-redesign.md.
 Read docs/implementation-principles.md for the Editor-first hybrid default.
+Apply docs/accuracy-and-verification.md to evidence and future task readiness.
 Follow the applicable target-project instructions. Distinguish the kit,
 original game, and report output. Keep the original code, scenes, prefabs,
 assets, .meta files, import settings, packages, settings, and player data
@@ -56,6 +57,10 @@ and readability during gameplay. Source can expose structural risks but
 does not establish aesthetic quality. Without suitable visuals, record the
 missing evidence and provide a conditional review plan, not a verdict that
 the current art or UI is bad. Do not invent player reactions or measurements.
+Tie captures to their known build, screen/state, dimensions, and input context;
+mark uncertain provenance. A confirmed readability problem does not prove a
+proposed layout solves it. Keep actual observations, design hypotheses, and
+future validation distinct, including any evidence against the recommendation.
 
 3. REVIEW REPRESENTATIVE SCREENS AND ART SYSTEMS
 
@@ -145,6 +150,8 @@ with links to the actual finding records and future task prompts.
 Acceptance criteria must describe observable outcomes in the supported
 conditions: legible required information, reachable controls, correct states,
 responsive layout, preserved identity, or measured limits when agreed.
+Give criteria stable IDs within their finding and preserve their requirement
+or selected-design source when generating implementation and verification tasks.
 List visual comparisons, interaction checks, device/input cases, and needed
 player review separately from checks already performed. A good-looking mockup
 does not establish runtime behavior or improved task completion.

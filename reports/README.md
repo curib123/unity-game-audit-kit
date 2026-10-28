@@ -13,7 +13,10 @@ Suggested outputs:
 - `playtest-log.md`: executed session evidence or clearly labeled unexecuted protocols.
 - `removal-candidates.md`: dependency and validation review for proposed removals.
 - `art-ui-redesign.md`, when relevant: screen/art-system strategies, design proposals, alternatives, selection state, and acceptance criteria using the [redesign brief](../templates/art-ui-redesign.md).
+- `verification-report.md`, after requested verification of selected changes: original criterion IDs, final-state evidence, actual checks, implementation completeness, and per-finding verification status using the [verification report template](../templates/verification-report.md).
 
 Use the [templates](../templates/audit-report.md). Create only the files relevant to the audit and make omissions clear in the report. Preserve previous runs unless an update was requested.
+
+Follow the [accuracy and verification policy](../docs/accuracy-and-verification.md). Replace template placeholders with real evidence or explicit unknowns and resolve links from the completed report's folder. Keep stale runs and correction history traceable; a plan, concept, or copied template is not proof that a check ran or a change works.
 
 This repository is public. Writing a local report does not authorize committing or publishing it. Keep original proprietary captures, personal data, and unredacted logs in an appropriate private evidence location; cite sanitized identifiers in shareable reports.

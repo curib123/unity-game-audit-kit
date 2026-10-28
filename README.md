@@ -163,6 +163,21 @@ Use [the project brief](templates/project-brief.md) to supply context. The [repo
 
 Source access alone cannot establish that the game feels good, sounds balanced, runs smoothly, or is ready to ship. Missing evidence is a coverage limitation, not proof of a defect.
 
+## Accuracy and implementation verification
+
+No prompt kit can guarantee 100% accuracy or a game without bugs. This kit requires traceable evidence and checks appropriate to each claim; these are review instructions, not automatic enforcement.
+
+| Before claiming a result | Required support |
+| --- | --- |
+| Report a finding | An inspected source or artifact, its baseline and conditions, the observed problem, and the basis for the expectation. Separate the symptom from a proposed cause. |
+| Prepare a real implementation | Revalidate the finding against the current game; check existing paths, references, APIs, and version compatibility. Label new files or assets as proposed. Investigate essential unknowns before a dependent fix. |
+| Report the change as implemented | Confirm all intended code, asset, reference, and Editor setup changes are complete. Report unfinished setup as partial implementation. |
+| Mark a finding Verified | Support every required acceptance criterion and relevant regression check with evidence for the final changed state. Record actual methods, results, and remaining coverage limits. |
+
+The [accuracy and verification policy](docs/accuracy-and-verification.md) covers stale or conflicting evidence, unsupported assumptions, independent review, and failed or skipped checks. A passing command with zero relevant tests does not prove a fix. Missing runtime tools may still permit a grounded, authorized source correction, but they do not establish runtime correctness.
+
+After selected changes, use the [verification report template](templates/verification-report.md) with [prompt 4](prompts/04-verify-fixes.md). It separates implementation completeness from `Verified`, `Failed`, `Blocked`, or `Not verified` and keeps a known failure visible even when other checks are blocked. The conclusion applies only to the recorded scope, environment, and final state.
+
 ## Working rules
 
 - The original game remains unchanged during an audit, including non-code Unity files and player data. Runtime checks use an authorized isolated copy and disposable test data.
