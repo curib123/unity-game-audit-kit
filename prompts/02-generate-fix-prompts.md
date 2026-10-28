@@ -48,6 +48,12 @@ upgrade packages, delete assets, or begin implementing the tasks.
    Keep Unity version, APIs, asset conventions, and .meta/GUID references
    compatible with the actual project. Unknown decisions stay explicit.
 
+   When art-ui-redesign.md is supplied, carry the recommended or selected
+   direction, preserved strengths, screen/system scope, responsive behavior,
+   component states, and visual criteria into the task. Identify the selection
+   state. An unselected direction remains a conditional plan; do not combine
+   alternative designs into one task or treat a concept as runtime evidence.
+
 6. Default every task to PLAN_ONLY with no execution authorization. Describe
    the concrete IDs and scope the user would select for future execution.
    Reading or generating these prompts does not grant that authorization.

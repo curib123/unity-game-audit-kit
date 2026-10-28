@@ -43,6 +43,12 @@ apply additional fixes or rewrite the acceptance criteria to fit the result.
    For removals, check references and runtime loading on the supported scope
    and confirm a practical restore path.
 
+   For art/UI redesigns, compare the actual revised screens/assets against
+   the selected brief, preserved strengths, and original acceptance criteria.
+   Check relevant states, supported displays, controls, and accessibility.
+   A concept image alone cannot verify implementation or improved usability;
+   identify missing rendered, interaction, or player evidence explicitly.
+
 5. Assign each finding one status with supporting evidence:
    - Verified: all required acceptance criteria are supported by evidence.
    - Failed: a criterion fails or the original issue persists.

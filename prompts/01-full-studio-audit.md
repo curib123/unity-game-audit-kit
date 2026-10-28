@@ -108,6 +108,15 @@ genre or expand scope merely because a common feature is absent. Treat a
 missing feature as a requirement gap only when the requirement is supported
 by the brief, documentation, agreed scope, or other explicit evidence.
 
+When evidence identifies art/UI suitability, layout, readability, interaction,
+or style problems, apply prompts/05-art-ui-redesign-review.md to the affected
+screens and art systems within this audit's scope. Recommend Keep, Enhance,
+Restructure, Redesign, or Investigate, with player benefit and preserved
+strengths. Compare meaningful alternatives for substantial changes. Distinguish
+the recommended direction from the user's selection and prepare scoped future
+tasks. Missing visuals are a coverage gap, not grounds for declaring art bad.
+Do not generate unrequested mockups or implement the proposed redesign.
+
 Review what to keep, fix, improve, add, investigate, defer, or consider for
 removal. Removal recommendations are candidates only: inspect serialized
 GUID references, scenes/prefabs, runtime loading, Resources/Addressables,
@@ -154,6 +163,8 @@ Create these files as relevant in OUTPUT_ROOT:
   templates/implementation-task.md.
 - playtest-log.md: executed sessions or clearly marked unexecuted protocols.
 - removal-candidates.md: reviews using templates/removal-review.md.
+- art-ui-redesign.md, when relevant: screen/art-system recommendations using
+  templates/art-ui-redesign.md, with alternatives, selection state, and criteria.
 
 Coverage statuses are Checked, Partially checked, Not checked, Blocked,
 and Not applicable. Record executed test outcomes separately as Pass,

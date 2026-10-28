@@ -52,7 +52,7 @@ what to fix or implement later. Unverified risks need investigation
 prompts. Future implementation requires my selected findings and scope.
 ```
 
-## The four prompts
+## Main workflow
 
 | Step | Prompt | Result |
 | --- | --- | --- |
@@ -62,6 +62,45 @@ prompts. Future implementation requires my selected findings and scope.
 | 4. Verify | [Verify fixes](prompts/04-verify-fixes.md) | Checks acceptance criteria and regressions without silently fixing more things. |
 
 The full audit already produces change prompts. Step 2 is useful when you want to refine the backlog or select a smaller batch.
+
+## Art and UI improvement or redesign
+
+Use the [focused art and UI review](prompts/05-art-ui-redesign-review.md) to assess whether the current visuals and interface suit the game's genre, audience, platforms, controls, and intended experience. It can expand findings from the full audit or run as a focused review.
+
+The review recommends a strategy for each relevant screen or art system:
+
+| Strategy | When it fits |
+| --- | --- |
+| Keep | The existing design works for the stated goals; preserve its strengths. |
+| Enhance | Targeted changes to typography, contrast, spacing, states, or asset treatment can address the problem. |
+| Restructure | Hierarchy, navigation, grouping, or composition needs changing within the existing identity. |
+| Redesign | A broader direction is justified by evidence of a mismatch or an explicit new design goal. |
+| Investigate | More visual, interaction, or requirement evidence is needed before recommending a change. |
+
+The output explains observed problems, proposed layouts and art direction, expected player benefits, what to preserve, meaningful alternatives, tradeoffs, and acceptance criteria. It uses the [redesign brief template](templates/art-ui-redesign.md) and generates future implementation prompts. A recommendation remains separate from the direction you select.
+
+Provide representative screenshots of the main menu, gameplay HUD, pause/settings, and any problem screens, plus gameplay or interaction recordings when relevant. Include the genre, target devices, and style references you want considered. Without visual evidence, the review records that limitation instead of judging the current artwork.
+
+Optional mockups require a request and suitable image/design tools; the kit does not include those tools. Concepts remain separate report artifacts outside the game and are not proof of a working implementation. The audit keeps the original game unchanged.
+
+### Copy this focused review request
+
+```text
+Use unity-game-audit-kit and follow prompts/05-art-ui-redesign-review.md.
+MODE: AUDIT_ONLY
+TARGET_GAME: <project-path-or-repository-URL>
+OUTPUT_ROOT: <report-folder-outside-the-original-game>
+
+Review whether my current game art and UI suit the genre, audience,
+platforms, controls, and intended experience. Identify evidenced problems
+with layout, readability, interaction, consistency, and visual style.
+
+For each affected screen or art system, recommend Keep, Enhance,
+Restructure, Redesign, or Investigate. Explain the problem, proposed
+change, player benefit, preserved strengths, tradeoffs, and acceptance
+criteria. Produce art-ui-redesign.md and future implementation prompts.
+Keep the original game unchanged.
+```
 
 ## What the studio checks
 
@@ -93,6 +132,7 @@ Each audit can produce the following files under a separate report folder:
 | `implementation-prompts.md` | One actionable future task per finding or shared root cause, plus dependencies. |
 | `playtest-log.md` | Executed sessions and results; unexecuted protocols are clearly labeled. |
 | `removal-candidates.md` | Evidence and dependency checks for possible simplifications or removals; no deletions. |
+| `art-ui-redesign.md` | When relevant: screen/art-system recommendations, alternatives, selected direction, and validation criteria. |
 
 Use [the project brief](templates/project-brief.md) to supply context. The [report template](templates/audit-report.md), [finding template](templates/finding.md), and [implementation task template](templates/implementation-task.md) keep handoffs consistent.
 

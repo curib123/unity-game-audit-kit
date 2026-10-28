@@ -54,6 +54,14 @@ IF EFFECTIVE_MODE IS EXECUTE WITH USER-AUTHORIZED FINDINGS AND SCOPE:
    fix. If a finding no longer applies, document that evidence and leave it
    unchanged. Respect the game's existing architecture and art direction.
 
+   For art/UI work, read art-ui-redesign.md when available. Use the user's
+   selected direction or explicit instruction to implement the documented
+   recommendation, preserving the elements named in the brief. Carry its
+   screen/system scope and visual/interaction criteria into the work. If
+   materially different directions remain unselected, plan the alternatives
+   and identify the decision before making direction-dependent edits. Do not
+   treat a concept image as an implemented asset or validated interaction.
+
 4. Make the smallest coherent change that meets the selected acceptance
    criteria. Keep .meta files and GUID references intact. Only change
    scenes, prefabs, assets, import settings, packages, or Project Settings

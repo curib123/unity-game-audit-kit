@@ -12,6 +12,7 @@ Suggested outputs:
 - `implementation-prompts.md`: future implementation or investigation tasks.
 - `playtest-log.md`: executed session evidence or clearly labeled unexecuted protocols.
 - `removal-candidates.md`: dependency and validation review for proposed removals.
+- `art-ui-redesign.md`, when relevant: screen/art-system strategies, design proposals, alternatives, selection state, and acceptance criteria using the [redesign brief](../templates/art-ui-redesign.md).
 
 Use the [templates](../templates/audit-report.md). Create only the files relevant to the audit and make omissions clear in the report. Preserve previous runs unless an update was requested.
 

@@ -78,6 +78,16 @@ Copy the complete `templates/finding.md` record for **every** backlog item here 
 | --- | --- | --- |
 | [specific behavior or presentation quality] | [reference; actually observed] | [constraint] |
 
+## Art and UI recommendations
+
+When relevant, use `templates/art-ui-redesign.md` to produce [art-ui-redesign.md or an inline brief]. Review suitability against the game's goals and actual visual/interaction evidence. Keep missing evidence in coverage; do not infer poor design from missing screenshots.
+
+| Screen / art system | Finding IDs and evidence | Strategy | Expected benefit / preserved strengths | Direction selection |
+| --- | --- | --- | --- | --- |
+| [name and state] | [AUD-### / evidence] | [Keep / Enhance / Restructure / Redesign / Investigate] | [benefit / preserve] | [pending / selected with user instruction reference] |
+
+Record meaningful alternatives for substantial changes and measurable acceptance criteria in the brief. A recommendation or concept does not authorize game changes. Identify requested concepts as proposals and keep them separate from actual rendered or interaction results.
+
 ## Removal candidate review
 
 No asset, component, scene, code, package, or feature is approved for removal by this report. Use `templates/removal-review.md`; include GUID, serialized and runtime references, external/content delivery usage, alternatives, owner decision, and rollback.

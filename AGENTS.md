@@ -14,6 +14,7 @@ Read the user's current request and the target repository's applicable instructi
 - Turn findings into future tasks: `prompts/02-generate-fix-prompts.md`.
 - Separately requested implementation: `prompts/03-implement-approved-findings.md`.
 - Independent verification: `prompts/04-verify-fixes.md`.
+- Focused art/UI improvement or redesign: `prompts/05-art-ui-redesign-review.md`, with `templates/art-ui-redesign.md`.
 - Evidence and prioritization: `docs/evidence-and-priorities.md`.
 - Specialist responsibilities: `docs/studio-roles.md`.
 
@@ -43,6 +44,8 @@ Keep observations separate from inferred causes. Only mark checks as performed w
 
 Missing access is not a game defect. A potential improvement is not automatically a missing requirement. Review the game's intended genre, art direction, audience, stage, platforms, and constraints before proposing additions or removals. Sample first-party content and disclose sampling. Treat vendor code separately from project integration.
 
+For art/UI findings, recommend Keep, Enhance, Restructure, Redesign, or Investigate for the affected screen or art system, with evidence and expected player benefit. These strategies do not replace the shared finding types or grant implementation permission. Preserve working design choices, compare meaningful alternatives when the change is substantial, and distinguish the recommended direction from the user's selection. Without visual evidence, record the limitation instead of declaring the art unsuitable. Requested concepts require appropriate tools, stay outside the game, and remain labeled as proposals; they do not prove runtime quality.
+
 ## Coordination
 
 Use the studio roles as review perspectives. Delegate independent areas when tools permit; otherwise cover them sequentially without pretending separate reviewers were consulted. Give specialists the same baseline and evidence rules. They must return evidence-backed findings and coverage, not modify the game. One coordinator checks evidence, merges duplicate root causes, resolves conflicting recommendations, and orders the backlog.
@@ -57,4 +60,4 @@ Only a separate explicit user request authorizing selected finding IDs or an equ
 
 ## Editing the kit itself
 
-When the user requests improvements to this kit, edit its documentation and templates directly. That is distinct from changing a target game. Keep relative links valid and the four prompt stages consistent. Do not add a Unity project, dependencies, executable scanner, or CI that opens Unity unless the user requests that functionality. Verify the content and final repository diff before claiming completion.
+When the user requests improvements to this kit, edit its documentation and templates directly. That is distinct from changing a target game. Keep relative links valid and the main workflow and focused review prompts consistent. Do not add a Unity project, dependencies, executable scanner, or CI that opens Unity unless the user requests that functionality. Verify the content and final repository diff before claiming completion.

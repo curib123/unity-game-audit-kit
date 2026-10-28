@@ -187,6 +187,19 @@ Prioritize player harm or expected benefit, exposure, recovery cost, affected au
 Keep meaningful strengths, deliberate tradeoffs, and unresolved disagreements visible beside proposed changes.
 Use the full [finding template](../templates/finding.md) and [implementation task template](../templates/implementation-task.md); the outline below is a compact collection aid.
 
+### Art and UI improvement or redesign recommendations
+
+When the evidence shows art/UI suitability, layout, interaction, readability, or style problems, use the [focused review prompt](../prompts/05-art-ui-redesign-review.md) and [redesign brief](../templates/art-ui-redesign.md) for the affected screens and art systems. Keep the original game unchanged.
+
+- [ ] Establish fit against the game's genre, audience, platform, inputs, and intended direction. Explain observable obstacles or mismatches; personal taste alone does not establish a defect.
+- [ ] Recommend **Keep**, **Enhance**, **Restructure**, **Redesign**, or **Investigate** with evidence and player benefit. These are strategy choices, separate from finding type, severity, coverage, and permission to implement.
+- [ ] Specify current problems, preserved strengths, proposed layout/flow, typography, colors, icons, component states, art treatment, responsive behavior, and constraints as relevant. Mark unknown design decisions explicitly.
+- [ ] For material changes, compare the recommendation with a credible smaller change or retaining the current approach. Describe tradeoffs, effort, dependencies, accessibility, and performance uncertainty without inventing measurements.
+- [ ] Record the recommended direction separately from the user's selection. Honor an existing instruction to adopt a recommendation; otherwise leave the decision pending and future tasks conditional.
+- [ ] Create optional visual concepts only when requested and supported by available tools. Keep them outside the game, distinguish them from current captures, and label them as proposals rather than implemented or tested results.
+- [ ] Define observable visual and interaction criteria across the supported screen/input matrix. Source-only review and concept images do not establish runtime usability; request the needed evidence or record the limitation.
+- [ ] Prepare scoped future implementation prompts using the selected or explicitly conditional direction, linked finding IDs, validation, and rollback. Do not implement a recommendation during this audit.
+
 ```text
 ID / title: AUD-001 / [specific issue]
 Type / confidence / severity / coverage: [allowed labels]

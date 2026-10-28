@@ -34,6 +34,8 @@ Use stable `AUD-001` IDs and the [finding template](../templates/finding.md). Ap
 
 Separate confirmed defects, risks, design opportunities, missing requirements, and removal candidates. Prefer a small set of well-supported findings to a long generic wishlist. Keep uncertainty attached to each finding instead of hiding it in a global disclaimer.
 
+For evidenced art/UI problems, use the [focused redesign review](../prompts/05-art-ui-redesign-review.md) within the requested scope. Recommend Keep, Enhance, Restructure, Redesign, or Investigate for each affected screen or art system. Use the [redesign brief](../templates/art-ui-redesign.md) to record fit with the game's goals, preserved strengths, proposed changes, meaningful alternatives, and acceptance criteria. Missing visuals remain a coverage gap. Requested concepts require suitable tools, stay outside the original game, and do not count as implementation or runtime validation.
+
 For possible removals, complete the [removal review](../templates/removal-review.md). Reference searches alone do not establish that an asset is unused. Consider GUID references, scenes, prefabs, Resources, Addressables, bundles, string keys, reflection, configuration, server content, editor tools, tests, and supported build variants as applicable. Recommend keep, rework, defer, or further investigation when evidence is incomplete.
 
 ## 6. Prepare prompts for future work
@@ -41,6 +43,8 @@ For possible removals, complete the [removal review](../templates/removal-review
 The full audit produces copy-ready prompts using the [implementation task template](../templates/implementation-task.md). Use [prompt 2](../prompts/02-generate-fix-prompts.md) to refine a selected batch later.
 
 Group symptoms with a shared cause. Put dependencies before dependent fixes. Include precise acceptance criteria, affected systems, needed evidence, test scope, rollback, and an effort estimate with assumptions. Unknown causes produce investigation tasks. Design decisions that the user must make remain explicit; they are not silently chosen by the implementation prompt.
+
+When a redesign brief exists, carry its screen/system scope, direction, preserved elements, responsive/input behavior, and validation criteria into the future tasks. Distinguish a recommendation from a selected direction. Honor a current user instruction adopting the recommendation; otherwise keep tasks conditional on the design decision and do not combine alternative directions into one implementation.
 
 Generating the prompt does not execute it. The separate [implementation prompt](../prompts/03-implement-approved-findings.md) defaults to planning. Execution requires explicit user authorization for the selected findings and scope; authorization already provided in the current task remains valid.
 
