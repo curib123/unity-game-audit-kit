@@ -1,0 +1,10 @@
+# Local copies of games and unsanitized evidence should stay out of this public kit.
+/local-projects/
+/private-evidence/
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/
+.DS_Store
+Thumbs.db
